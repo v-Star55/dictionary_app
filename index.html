@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dictionay App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+    <link rel="shortcut icon" href="hero.png" type="image/x-icon">
+
+  </head>
+  <body>
+    <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex align-items-center flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center justify-content-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none logo">
+            <img  src="hero.png" alt="" width="40" height="40">
+            <span class="fs-4">Dictionay App</span>
+          </a>
+          <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 form">
+            <input type="text" id="inputSearch" class="form-control m-1" placeholder="Search word" >
+            <button type="submit" id="searchBtn" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </header>
+
+      <figure class="quote skeleton">
+        <blockquote id="blockquote">
+        
+        </blockquote>
+        <figcaption>
+          &mdash;<cite id="author"></cite>
+        </figcaption>
+      </figure>
+
+      <div class="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        
+      </div>
+    <div class="px-4 py-5 my-5 text-center hidden">
+        
+        <h1 class="display-5 fw-bold text-body-emphasis" id="word"></h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4" id="meaning"></p>
+        </div>
+      </div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
