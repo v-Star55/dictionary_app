@@ -15,7 +15,6 @@ const loading=document.querySelector('.loading');
 form.addEventListener('submit',function(e){
     e.preventDefault();
     inputValue=input.value.trim().toLowerCase();
-    console.log(inputValue);
     getMeaning(inputValue);
     loading.style.display='flex';
     input.value='';
@@ -30,14 +29,13 @@ const getMeaning=async(word)=>{
         const response = await fetch(`https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary?word=${word}`, {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': '5d460012b1msha36c82112472b49p1d2d76jsnb4418b4787c7',
+            'X-RapidAPI-Key': 'Paste the Dictionar API key HERE',
             'X-RapidAPI-Host': 'dictionary-by-api-ninjas.p.rapidapi.com'
           }
-        });                              // This all was done using Rapid API abd it was part of fetch API 
+        });                              
 
         if (response.ok) {               // If response is ok then we will get the data
             result = await response.json();
-            console.log(result);
             hidden.style.opacity='1'; 
             loading.style.display='none';
 
@@ -68,12 +66,11 @@ const getQuotes=async()=>{
       count: '1'
     },
     headers: {
-      'X-RapidAPI-Key': '5d460012b1msha36c82112472b49p1d2d76jsnb4418b4787c7',
+      'X-RapidAPI-Key': 'Paste the famous quote API key HERE',
       'X-RapidAPI-Host': 'famous-quotes4.p.rapidapi.com'
     }
   });
   const [data]=await response.json();
-  console.log(data);
   blockquote.innerHTML=`${data.text}`;
   author.innerHTML=`${data.author}`;
 }
